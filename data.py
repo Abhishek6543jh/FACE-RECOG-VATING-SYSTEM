@@ -7,14 +7,11 @@ def capture_images(output_dir, name, num_images=15):
     # Ensure the output directory exists
     if not os.path.exists(output_dir):
         os.makedirs(output_dir)
-
     # Start capturing images from the camera
     cap = cv2.VideoCapture(0)
     print(f"Capturing {num_images} images...")
-
     # Initialize frame counter
     count = 0
-
     while count < num_images:
         # Read a frame from the camera
         ret, frame = cap.read()
